@@ -19,10 +19,11 @@ function isValid(name) {
   if (!name) {
     return false;
   }
-  if (name.trim().length < 4) {
+  let trimmedName = name.trim();
+  if (trimmedName.length < 4) {
     return false;
   }
-  if (name.includes(' ')) {
+  if (trimmedName.includes(" ")) {
     return false;
   }
   return true;
