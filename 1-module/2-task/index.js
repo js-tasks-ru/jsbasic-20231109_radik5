@@ -16,16 +16,13 @@ function print(text) {
  */
 function isValid(name) {
   // условие - имя непустое
-  if (name === undefined) {
-    return false;
-  }
-  if (name === null) {
+  if (!name) {
     return false;
   }
   if (name.trim().length < 4) {
     return false;
   }
-  if (name.indexOf(" ", 0) !== -1) {
+  if (name.includes(' ')) {
     return false;
   }
   return true;
