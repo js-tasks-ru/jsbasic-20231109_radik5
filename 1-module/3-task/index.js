@@ -12,10 +12,7 @@ ucFirst('') === '';
  */
 
 function ucFirst(str) {
-  if (str.length === 0) {
-    return "";
-  }
-  if (str.length === 1) {
+  if (str.length <= 1) {
     return str.toUpperCase();
   }
   return str[0].toUpperCase() + str.slice(1);
