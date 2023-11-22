@@ -1,3 +1,9 @@
 function getMinMax(str) {
-  // ваш код...
+  const matches = str.match(/(-?\d+(\.\d+)?)/g);
+  const max = Math.max(...matches);
+  const min = Math.min(...matches);
+  return {
+    min,
+    max,
+  };
 }
