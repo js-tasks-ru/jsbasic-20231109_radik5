@@ -1,13 +1,7 @@
 function camelize(str) {
-  let arr = str.split("");
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === "-") {
-      result.push(arr[i + 1].toUpperCase());
-      i++;
-    } else {
-      result.push(arr[i]);
-    }
-  }
+  const arr = str.split("-"); // массив строк
+  const result = arr.map((el, indx) =>
+    indx === 0 ? el : el.charAt(0).toUpperCase() + el.slice(1)
+  );
   return result.join("");
 }
